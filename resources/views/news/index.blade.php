@@ -2,16 +2,9 @@
 
 @section('content')
     <h2>All news</h2>
-
-    <!-- Bootstrap шаблон... -->
-
     <div class="panel-body">
-        <!-- Отображение ошибок проверки ввода -->
     @include('common.errors')
-
-    <!-- Форма новой задачи -->
-
     </div>
-
+    <a href="{{route('news.create')}}" class="btn btn-success"><i class="fa fa-plus"></i>Create new news</a>
     <!-- TODO: Текущие задачи -->
 @endsection
