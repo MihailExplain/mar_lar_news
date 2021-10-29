@@ -39,7 +39,16 @@
                             </td>
 
                             <td>
-                               DELETE {{$news->id}}
+                                <form method="post" action="{{route('news.delete', $news->id)}}">
+                                    {{csrf_field()}}
+                                    {{method_field('DELETE')}}
+                                    <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                                </form>
+                                <form method="post" action="{{route('news.edit', $news->id)}}">
+                                    {{csrf_field()}}
+                                    {{method_field('GET')}}
+                                    <button class="btn btn-danger"><i class="fa fa-pencil"></i></button>
+                                </form>
                             </td>
                         </tr>
                     @endforeach
