@@ -12,13 +12,14 @@
                 <label for="title" class="col-sm-3 control-label">Title</label>
 
                 <div class="col-sm-6">
-                    <input type="text" name="name" id="title" class="form-control">
+                    <input type="text" name="title" id="title" class="form-control" value="{{old('title')}}">
                 </div>
             </div>
             <div class="form-group">
                 <label for="article" class="col-sm-3 control-label">Article</label>
                 <div class="col-sm-6">
-                    <input type="text" name="name" id="article" class="form-control">
+                    <textarea  name="article" id="article" class="form-control">{{old('article')}}</textarea>
+{{--                    <input type="textaria" name="article" id="article" class="form-control">--}}
                 </div>
             </div>
             <div class="form-group">
