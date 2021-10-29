@@ -16,4 +16,10 @@ Route::get('/', function () {
 });
 Route::get('/news', function (){
    return view('news.index');
-});
+})->name('news.index');
+Route::get('/news/create', function (){
+    return view('news.create');
+})->name('news.create');
+Route::get('/news', function (){
+    //TODO STORE
+})->name('news.store');
