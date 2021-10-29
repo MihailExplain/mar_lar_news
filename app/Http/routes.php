@@ -20,6 +20,6 @@ Route::get('/news', function (){
 Route::get('/news/create', function (){
     return view('news.create');
 })->name('news.create');
-Route::get('/news', function (){
+Route::post('/news', function (){
     //TODO STORE
 })->name('news.store');
