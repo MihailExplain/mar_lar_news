@@ -43,3 +43,17 @@ Route::post('/news', function (\Illuminate\Http\Request $request){
     return redirect(route('news.index'));
 })->name('news.store');
 
+Route::delete('/news/{news}', function (\App\Models\Article $news){
+    $news->delete();
+    return redirect(route('news.index'));
+})->name('news.delete');
+
+Route::get('/news/{news}/edit', function (\App\Models\Article $news){
+    return view('news.edit', [
+        'news'=>$news,
+        ]);
+    dd($news);
+})->name('news.edit');
+Route::put('/news{news}', function (\Illuminate\Http\Request $request,\App\Models\Article $news){
+
+})->name('news.update');
